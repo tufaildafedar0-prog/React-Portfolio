@@ -2,7 +2,7 @@
   "name": "react-portfolio",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://<your-github-username>.github.io/<repo-name>/",
+  "homepage": "https://<your-username>.github.io/React-Portfolio/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

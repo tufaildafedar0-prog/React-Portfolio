@@ -10,7 +10,7 @@ import './styles/contact.css'
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/React-Portfolio">
       <App />
     </BrowserRouter>
   </React.StrictMode>

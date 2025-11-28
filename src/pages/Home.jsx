@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import yorichi from '../assets/img/yorichi.jpg'
 import htmljslogo from '../assets/img/HTML-CSS-JS-Logo.png'
 import bootstrapLogo from '../assets/img/bootstrap5-removebg-preview.png'
@@ -83,11 +84,11 @@ export default function Home() {
               </div>
               <p className="lead mb-4">I build modern, responsive web applications with clean code and great user experiences. Let's turn your ideas into digital reality!</p>
               <div className="btn-group mt-4">
-                <a href="/React-Portfolio/#/projects" className="btn btn-custom">View My Projects</a>
+                <Link to="/projects" className="btn btn-custom">View My Projects</Link>
                 <a href="https://www.linkedin.com/in/tufailhasan3241/" target="_blank" rel="noreferrer" className="btn btn-custom">Visit LinkedIn</a>
               </div>
               <div className="mt-4">
-                <a href="/React-Portfolio/#/about" className="btn btn-outline-portfolio">Learn More About Me</a>
+                <Link to="/about" className="btn btn-outline-portfolio">Learn More About Me</Link>
               </div>
             </div>
             <div className="col-lg-6 text-center">

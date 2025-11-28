@@ -53,17 +53,25 @@ export default function Home() {
   }, [])
 
   useEffect(() => {
-    const items = document.querySelectorAll('.timeline-item')
-    function checkVisibility() {
-      items.forEach(item => {
-        const top = item.getBoundingClientRect().top
-        const windowHeight = window.innerHeight
-        if (top < windowHeight - 100) item.classList.add('visible')
-      })
-    }
-    checkVisibility()
-    window.addEventListener('scroll', checkVisibility)
-    return () => window.removeEventListener('scroll', checkVisibility)
+    // Delay check to ensure DOM is fully rendered
+    const timeoutId = setTimeout(() => {
+      const items = document.querySelectorAll('.timeline-item')
+      
+      function checkVisibility() {
+        items.forEach(item => {
+          const rect = item.getBoundingClientRect()
+          const windowHeight = window.innerHeight
+          if (rect.top < windowHeight - 100) item.classList.add('visible')
+        })
+      }
+      
+      checkVisibility()
+      window.addEventListener('scroll', checkVisibility)
+      
+      return () => window.removeEventListener('scroll', checkVisibility)
+    }, 100)
+
+    return () => clearTimeout(timeoutId)
   }, [])
 
   return (

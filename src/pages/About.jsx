@@ -32,7 +32,7 @@ export default function About() {
             <div className="col-lg-4 text-center mb-4 mb-lg-0">
               <img src={profile} alt="Tufailhasan Dafedar" className="profile-img" />
               <div className="mt-4">
-                <a href="/src/assets/img/WD resume.pdf" download className="btn btn-primary btn-lg">
+                <a href="https://your-resume-url-or-public-link" download className="btn btn-primary btn-lg">
                   <i className="fas fa-download me-2"></i>Download Resume
                 </a>
               </div>

@@ -1,0 +1,381 @@
+/* Enhanced About Page Styles */
+.about-section {
+    padding: 120px 0 80px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 32px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    backdrop-filter: blur(6px);
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    z-index: 0;
+}
+
+.about-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Enhanced glass card styling */
+.glass-card {
+    background: rgba(255,255,255,0.15);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+    backdrop-filter: blur(12px);
+    padding: 2.5rem 2rem;
+    margin-bottom: 2.5rem;
+    border: 1.5px solid rgba(255,255,255,0.2);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(226, 43, 43, 0.1) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 0;
+}
+
+.glass-card:hover::before {
+    opacity: 1;
+}
+
+.glass-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(226, 43, 43, 0.2);
+    border-color: rgba(226, 43, 43, 0.3);
+}
+
+/* Enhanced profile image */
+.profile-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255,255,255,0.2);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    transition: all 0.5s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    border-color: #e22b2b;
+    box-shadow: 0 15px 50px rgba(226, 43, 43, 0.4);
+}
+
+.profile-img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(226, 43, 43, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.profile-img:hover::after {
+    opacity: 1;
+}
+
+/* Enhanced section titles */
+.section-title {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, #e22b2b, #48fca2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #e22b2b, #cb1111);
+    border-radius: 2px;
+}
+
+.section-title.center:after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Enhanced progress bars */
+.progress {
+    background: rgba(255,255,255,0.15);
+    border-radius: 10px;
+    height: 1.2rem;
+    box-shadow: 0 2px 10px rgba(13, 110, 253, 0.1);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.progress-bar {
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 10px;
+    transition: width 1.2s cubic-bezier(.4,0,.2,1);
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Enhanced badges */
+.badge.bg-light.text-dark {
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.badge.bg-light.text-dark:hover {
+    background: linear-gradient(135deg, #e22b2b, #cb1111) !important;
+    color: #fff !important;
+    transform: scale(1.1) rotate(-2deg);
+    box-shadow: 0 5px 15px rgba(138, 43, 226, 0.3);
+}
+
+/* Enhanced education cards */
+.education-card {
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    height: 100%;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(226, 43, 43, 0.2);
+    border-color: rgba(226, 43, 43, 0.3);
+}
+
+.education-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    margin: 0 auto 15px;
+    font-size: 2rem;
+    color: #e22b2b;
+    transition: all 0.3s ease;
+}
+
+.education-card:hover .education-icon {
+    background: rgba(226, 43, 43, 0.2);
+    transform: scale(1.1);
+}
+
+/* Enhanced soft skills list */
+.soft-skills-list .list-group-item {
+    background: transparent;
+    border: none;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.3s ease;
+}
+
+.soft-skills-list .list-group-item:hover {
+    background: rgba(255,255,255,0.05);
+    padding-left: 10px;
+    border-bottom-color: #e22b2b;
+}
+
+.soft-skills-list .list-group-item:last-child {
+    border-bottom: none;
+}
+
+/* Enhanced fun facts */
+.fun-fact {
+    text-align: center;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.fun-fact:hover {
+    transform: translateY(-5px);
+}
+
+.fun-fact h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    background: linear-gradient(135deg, #e22b2b, #6a11cb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Enhanced button styling */
+.btn-primary {
+    background: linear-gradient(135deg, #ff0000, #ffd632);
+    border: none;
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(226, 43, 43, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(226, 43, 43, 0.4);
+}
+
+/* Enhanced skills icons */
+.skills-icons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.skills-icons i {
+    margin: 0 10px;
+    font-size: 2.5rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.skills-icons i:hover {
+    transform: scale(1.2) translateY(-5px);
+    color: #e22b2b;
+}
+
+/* Enhanced easter egg */
+.easter-egg {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.easter-egg:hover {
+    transform: scale(1.05);
+    background: rgba(138, 43, 226, 0.1);
+    border-color: #e22b2b;
+}
+
+/* Animation for elements */
+.glass-card, .education-card, .fun-fact {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.glass-card.visible, .education-card.visible, .fun-fact.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .about-section { 
+        padding: 100px 0 60px; 
+        border-radius: 20px;
+    }
+    .glass-card { 
+        padding: 1.5rem 1rem; 
+    }
+    .profile-img {
+        width: 260px;
+        height: 260px;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .about-section {
+        text-align: center;
+    }
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .fun-fact h3 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .about-section {
+        border-radius: 15px;
+        margin-top: 15px;
+        padding: 80px 0 40px;
+    }
+    .glass-card {
+        padding: 1rem 0.8rem;
+    }
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+}

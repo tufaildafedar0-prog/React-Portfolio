@@ -1,0 +1,294 @@
+/* Enhanced Contact Page Styles */
+body.contact-body {
+    /* optional page-specific body if needed */
+}
+
+.contact-section {
+    padding: 120px 0 80px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.contact-container {
+    background: rgba(255,255,255,0.08);
+    border-radius: 32px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    backdrop-filter: blur(6px);
+    padding: 40px;
+    border: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    z-index: 0;
+}
+
+.contact-content {
+    position: relative;
+    z-index: 1;
+}
+
+.contact-title {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #b50000, #d10eef);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.contact-subtitle {
+    color: #aaaaaa;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form {
+    background: rgba(255,255,255,0.1);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(138,43,226,0.1);
+    padding: 40px 30px;
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.contact-form:hover {
+    box-shadow: 0 12px 40px rgba(226, 43, 43, 0.15);
+    border-color: rgba(226, 43, 43, 0.2);
+}
+
+.form-label {
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.form-control, textarea.form-control {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #fff;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, textarea.form-control:focus {
+    background: rgba(255,255,255,0.15);
+    border-color: #e22b2b;
+    box-shadow: 0 0 0 3px rgba(138,43,226,0.2);
+    color: #fff;
+}
+
+.form-control::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+.btn-send {
+    background: linear-gradient(135deg, #e22b2b, #112dcb);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 40px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(226, 43, 43, 0.3);
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+}
+
+.btn-send::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-send:hover::before {
+    left: 100%;
+}
+
+.btn-send:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(226, 43, 43, 0.4);
+}
+
+.form-message {
+    margin-top: 15px;
+    font-weight: 500;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.contact-info {
+    margin-top: 50px;
+}
+
+.info-card {
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(226, 43, 43, 0.2);
+    border-color: rgba(226, 43, 43, 0.3);
+}
+
+.info-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(226, 43, 43, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-size: 1.5rem;
+    color: #e22b2b;
+    transition: all 0.3s ease;
+}
+
+.info-card:hover .info-icon {
+    background: rgba(226, 43, 43, 0.3);
+    transform: scale(1.1);
+}
+
+.info-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.info-text {
+    color: #aaaaaa;
+    margin-bottom: 0;
+}
+
+.social-links-contact {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.social-links-contact a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-links-contact a:hover {
+    background: #e22b2b;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(226, 43, 43, 0.3);
+}
+
+/* Animation for form elements */
+.form-group {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.form-group.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .contact-section {
+        padding: 100px 0 60px;
+    }
+    
+    .contact-container {
+        padding: 30px;
+    }
+    
+    .contact-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .contact-title {
+        font-size: 2rem;
+    }
+    
+    .contact-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .contact-form {
+        padding: 30px 20px;
+    }
+    
+    .info-card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .contact-section {
+        padding: 80px 0 40px;
+    }
+    
+    .contact-container {
+        padding: 20px;
+        border-radius: 20px;
+    }
+    
+    .contact-title {
+        font-size: 1.8rem;
+    }
+    
+    .contact-form {
+        padding: 20px 15px;
+    }
+    
+    .btn-send {
+        width: 100%;
+    }
+}

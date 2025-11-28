@@ -7,6 +7,7 @@ import mysqlImg from '../assets/img/mysq.png'
 
 export default function Home() {
   const [typedText, setTypedText] = useState('')
+  
   useEffect(() => {
     const strings = ['responsive websites', 'web applications', 'user experiences', 'digital solutions']
     let loopIndex = 0, char = 0, forward = true, timeoutId = null
@@ -53,10 +54,8 @@ export default function Home() {
   }, [])
 
   useEffect(() => {
-    // Delay check to ensure DOM is fully rendered
     const timeoutId = setTimeout(() => {
       const items = document.querySelectorAll('.timeline-item')
-      
       function checkVisibility() {
         items.forEach(item => {
           const rect = item.getBoundingClientRect()
@@ -64,13 +63,10 @@ export default function Home() {
           if (rect.top < windowHeight - 100) item.classList.add('visible')
         })
       }
-      
       checkVisibility()
       window.addEventListener('scroll', checkVisibility)
-      
       return () => window.removeEventListener('scroll', checkVisibility)
     }, 100)
-
     return () => clearTimeout(timeoutId)
   }, [])
 
@@ -87,11 +83,11 @@ export default function Home() {
               </div>
               <p className="lead mb-4">I build modern, responsive web applications with clean code and great user experiences. Let's turn your ideas into digital reality!</p>
               <div className="btn-group mt-4">
-                <a href="/projects" className="btn btn-custom">View My Projects</a>
+                <a href="/React-Portfolio/#/projects" className="btn btn-custom">View My Projects</a>
                 <a href="https://www.linkedin.com/in/tufailhasan3241/" target="_blank" rel="noreferrer" className="btn btn-custom">Visit LinkedIn</a>
               </div>
               <div className="mt-4">
-                <a href="/about" className="btn btn-outline-portfolio">Learn More About Me</a>
+                <a href="/React-Portfolio/#/about" className="btn btn-outline-portfolio">Learn More About Me</a>
               </div>
             </div>
             <div className="col-lg-6 text-center">
@@ -142,7 +138,7 @@ export default function Home() {
               <div className="timeline-content">
                 <h3 className="timeline-title">Frontend Developer</h3>
                 <p className="timeline-desc">
-                  I'm a web developer with expertise in HTML, CSS, and JavaScript. I use these core technologies to build responsive, user-friendly websites.
+                  I'm a web developer with expertise in HTML, CSS, and JavaScript. I use these core technologies to build responsive, user-friendly websites. Whether creating structure with semantic HTML, styling with modern CSS, or adding interactivity with JavaScript, I enjoy bringing creative ideas to life on the web.
                 </p>
               </div>
               <div className="timeline-icon">
@@ -154,7 +150,7 @@ export default function Home() {
               <div className="timeline-content">
                 <h3 className="timeline-title">Bootstrap Developer</h3>
                 <p className="timeline-desc">
-                  I use Bootstrap 5 to build responsive, mobile-first websites efficiently.
+                  I use Bootstrap 5 to build responsive, mobile-first websites efficiently. It helps me create clean layouts, modern components, and consistent designs with minimal custom CSS. With Bootstrap's grid system and components, I ensure websites look great on all devices while maintaining development speed.
                 </p>
               </div>
               <div className="timeline-icon">
@@ -166,7 +162,7 @@ export default function Home() {
               <div className="timeline-content">
                 <h3 className="timeline-title">React + Node Developer</h3>
                 <p className="timeline-desc">
-                  I work with React JS to build fast, interactive user interfaces using reusable components.
+                  I work with React JS to build fast, interactive user interfaces using reusable components. On the backend, I use Node JS to handle server-side logic, APIs, and database connections. This full-stack approach allows me to create dynamic, scalable web applications with excellent user experiences.
                 </p>
               </div>
               <div className="timeline-icon">
@@ -178,7 +174,7 @@ export default function Home() {
               <div className="timeline-content">
                 <h3 className="timeline-title">MySQL Developer</h3>
                 <p className="timeline-desc">
-                  As a MySQL developer, I design and manage databases to store and organize data efficiently.
+                  As a MySQL developer, I design and manage databases to store and organize data efficiently. I write optimized SQL queries and design relational tables with proper normalization. My focus is on building secure, reliable database systems that support web applications with optimal performance.
                 </p>
               </div>
               <div className="timeline-icon">
